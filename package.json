@@ -1,0 +1,12 @@
+{
+  "name": "persiana-lellis",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve -l 4180 .",
+    "photos": "node scripts/download-drive.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
+}
