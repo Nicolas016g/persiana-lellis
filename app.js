@@ -44,3 +44,53 @@ document.querySelector("[data-lightbox-close]")?.addEventListener("click", () =>
 dialog?.addEventListener("click", (event) => {
   if (event.target === dialog) dialog.close();
 });
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const stages = document.querySelectorAll("main > section:not(.hero), .foot");
+
+const paintStage = (stage) => {
+  stage.classList.add("is-in");
+  stage.querySelectorAll("img[data-src]").forEach((img) => {
+    if (!img.getAttribute("src")) img.src = img.dataset.src;
+  });
+  stage.querySelectorAll("iframe[data-src]").forEach((frame) => {
+    if (!frame.getAttribute("src")) frame.src = frame.dataset.src;
+  });
+};
+
+stages.forEach((stage) => {
+  stage.classList.add("reveal");
+  stage.querySelectorAll("img[src]").forEach((img) => {
+    img.dataset.src = img.getAttribute("src");
+    img.removeAttribute("src");
+  });
+  stage.querySelectorAll("iframe[src]").forEach((frame) => {
+    frame.dataset.src = frame.getAttribute("src");
+    frame.removeAttribute("src");
+  });
+});
+
+if (reduceMotion) {
+  stages.forEach(paintStage);
+} else {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        paintStage(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "12% 0px", threshold: 0.08 },
+  );
+  stages.forEach((stage) => observer.observe(stage));
+}
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    const id = link.getAttribute("href").slice(1);
+    const target = document.getElementById(id);
+    const stage = target?.closest(".reveal");
+    if (stage) paintStage(stage);
+  });
+});
