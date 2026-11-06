@@ -13,7 +13,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
-  font-family: Manrope, system-ui, sans-serif;
+  font-family: "Libre Franklin", system-ui, sans-serif;
   color: var(--ink);
   background: #241810;
   line-height: 1.6;
@@ -38,7 +38,7 @@ button { font: inherit; }
   font-weight: 600;
 }
 h1, h2, h3 {
-  font-family: Fraunces, Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -236,10 +236,11 @@ h1 em {
   padding-left: 32px;
 }
 .num {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  font-size: 3rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-variant-numeric: oldstyle-nums;
+  letter-spacing: 0.01em;
+  font-size: 3.4rem;
   color: var(--gold-2);
   line-height: 1;
   margin-bottom: 8px;
@@ -400,7 +401,7 @@ h1 em {
 }
 .review-grid blockquote::before {
   content: "“";
-  font-family: Fraunces, Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 3.4rem;
   line-height: 0.7;
   color: var(--gold);
@@ -412,7 +413,7 @@ cite {
   display: block;
   margin-top: 18px;
   font-style: italic;
-  font-family: Fraunces, Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.15rem;
   color: var(--gold-2);
 }
