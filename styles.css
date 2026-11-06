@@ -161,9 +161,15 @@ h2 { font-size: clamp(2.2rem, 4.6vw, 4rem); margin: 12px 0 18px; }
   background-size: cover;
   background-position: center;
 }
+.hero-copy,
+.hero-copy h1,
+.hero .kicker,
+.hero .lede,
+.hero .btn,
+.hero-meta {
+  font-family: "Bodoni Moda", "Times New Roman", serif;
+}
 .kicker {
-  font-family: Cinzel, "Times New Roman", serif;
-  font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -191,7 +197,6 @@ h1 em {
   font-weight: 500;
 }
 .lede {
-  font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 500;
   font-size: clamp(1.15rem, 2.1vh, 1.45rem);
   line-height: 1.35;
@@ -201,7 +206,6 @@ h1 em {
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(12px, 2vh, 24px); }
 .hero .btn {
   min-height: 44px;
-  font-family: Cinzel, "Times New Roman", serif;
   font-weight: 500;
   letter-spacing: 0.14em;
 }
@@ -217,7 +221,6 @@ h1 em {
   margin-top: clamp(12px, 2.2vh, 28px);
   padding-top: clamp(10px, 1.5vh, 16px);
   border-top: 1px solid rgba(217, 187, 132, 0.28);
-  font-family: Cinzel, "Times New Roman", serif;
   font-weight: 500;
   font-size: 0.72rem;
   letter-spacing: 0.16em;
