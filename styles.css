@@ -99,10 +99,11 @@ h2 { font-size: clamp(2.2rem, 4.6vw, 4rem); margin: 12px 0 18px; }
   white-space: nowrap;
 }
 .menu a {
+  font-family: "Bodoni Moda", "Times New Roman", serif;
   text-decoration: none;
-  font-size: 1.08rem;
+  font-size: 1.35rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 .menu a:hover { color: var(--gold-2); }
 .nav-cta {
@@ -110,8 +111,9 @@ h2 { font-size: clamp(2.2rem, 4.6vw, 4rem); margin: 12px 0 18px; }
   color: var(--ink) !important;
   padding: 12px 18px;
   text-decoration: none;
-  font-size: 0.95rem !important;
-  font-weight: 600 !important;
+  font-family: "Bodoni Moda", "Times New Roman", serif;
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   flex-shrink: 0;
