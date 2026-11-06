@@ -107,7 +107,7 @@ h2 { font-size: clamp(2.2rem, 4.6vw, 4rem); margin: 12px 0 18px; }
 }
 .menu a {
   text-decoration: none;
-  font-size: 1.55rem;
+  font-size: 1.22rem;
   letter-spacing: -0.02em;
 }
 .menu a:hover { color: var(--gold-2); }
@@ -116,7 +116,7 @@ h2 { font-size: clamp(2.2rem, 4.6vw, 4rem); margin: 12px 0 18px; }
   color: var(--ink) !important;
   padding: 10px 18px;
   text-decoration: none;
-  font-size: 1.45rem !important;
+  font-size: 1.15rem !important;
   font-weight: 700 !important;
   font-variation-settings: "opsz" 96, "wght" 700;
   letter-spacing: 0.02em;
